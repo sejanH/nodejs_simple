@@ -1,5 +1,4 @@
 # Simple nodejs codes to register and login and contact form
-============================================================
 
 Requirments
 ===========
@@ -11,13 +10,16 @@ Process
 =======
 * First clone the repo then enter into the folder
 * Open command prompt on your cloned directory
-* ```javascript
+* Now run type in command
+```javascript
 npm install
 ```
 it will install required modules and create node_module folder.
-* ```javascript
+* After installed all modules type this
+```javascript
 npm start
 ```
-* goto to browsers ```html
+* Goto to browsers
+```html
 http://localhost:3000
 ```
