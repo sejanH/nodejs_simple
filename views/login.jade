@@ -1,0 +1,18 @@
+extends layout
+block content
+    .jumbotron.alert-info
+        .container
+            h2 Login to enter our site
+            hr
+            form(method='post',action='/users/login' class='form-horizontal')
+                .form-group
+                    label.col-sm-2 Usrename
+                    .col-sm-10
+                        input.form-control(required, type='text',name='username',placeholder='Enter Your Username')
+                .form-group
+                    label.col-sm-2 Password
+                    .col-sm-10
+                        input.form-control(required, type='password',name='password',placeholder='Enter Your Password')
+                br
+                .col-md-2
+                input.btn.btn-info(type='submit',name='submit',value='Login')

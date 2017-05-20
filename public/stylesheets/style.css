@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Exo;
+}
+body {
+  
+}
+
+ul.success li, ul.info li, ul.error li {
+	margin: 20px 0 20px 0;
+	padding: 15px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	list-style: none;
+	font-weight: bolder;
+}
+ul.success li{
+	color: #3c3c3c;
+	background-color: #67b168;
+	border-color: #2b542c;
+}
+ul.info li{
+	color: #3c3c3c;
+	background-color: #a6e1ec;
+	border-color: #2aabd2;
+}
+ul.error li{
+	color: #b9def0;
+	background-color: #d9534f;
+	border-color: #761c19;
+}
+
+.footer{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 9px;
+	background: #252525;
+	font-size: 12px;
+	height: auto;
+	padding-top: 15px;
+	margin-top: 30px;
+	text-align: center;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	color: #a6e1ec;
+}

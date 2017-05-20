@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title #{title}
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/style.css', rel='stylesheet')
+    link(rel='icon' href='/images/fav.ico' type='image/x-icon')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(style="position:relative;")
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Simple Website
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li(class=(title==='Express' ? 'active' : ''))
+              a(href='/') Home
+            li(class=(title==='About' ? 'active' : ''))
+              a(href='/about') About
+            li(class=(title==='Contact' ? 'active' : ''))
+              a(href='/contact') Contact
+          ul.nav.navbar-nav.navbar-right
+            if !user
+              li(class=(title==='Login' ? 'active' : ''))
+                a(href='/users/login') Login
+              li(class=(title==='Register' ? 'active' : ''))
+                a(href='/users/register') Register
+            if user
+              li
+                a(style='font-weight:bolder;font-size:18px;') #{user.username.toUpperCase()}
+              li
+                a(href='/users/logout') Logout
+
+    .container
+      #msg
+        !=messages()
+      block content
+      .footer
+        &copy; Mominul Haque Sejan, 2017
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\\/script>')
+    script(src='/javascripts/bootstrap.js')
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/userJS.js')

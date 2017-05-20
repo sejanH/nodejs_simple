@@ -1,0 +1,16 @@
+extends layout
+block content
+	.container
+		.row.col-md-6.alert.alert-success
+			h2 Contact
+			form(method='post',action='contact/send')
+				.form-group
+					label Name
+					input.form-control(required,type='text',name='name',placeholder='Enter Name')
+				.form-group
+					label Email
+					input.form-control(required,type='email',name='email',placeholder='Enter Email')
+				.form-group
+					label Message
+					textarea.form-control(required,name='message',placeholder='Your message',rows='5')
+				button.btn.btn-primary(type='submit') Send

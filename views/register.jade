@@ -1,0 +1,36 @@
+extends layout
+block content
+    .alert.alert-warning.container-fluid
+        h2 Register to enter our site
+
+        ul.alert
+            if errors
+                each error, i in errors
+                    li.alert-danger(style='padding: 0px 7px;') #{error.msg}
+        form(method='post',action='/users/register',class='form-horizontal')
+            .form-group
+                label.col-md-2 Usrename
+                .col-md-10
+                    input.form-control(type='text',name='username',placeholder='Enter preferred username')
+            .form-group
+                label.col-md-2 Password
+                .col-md-4
+                    input.form-control(type='password',name='pass',placeholder='Enter Password')
+                label.col-md-2 Confirm Password
+                .col-md-4
+                    input.form-control(type='password',name='cpass',placeholder='Enter Password Again')
+            .form-group
+                label.col-md-2 Email
+                .col-md-10
+                    input.form-control(type='email',name='email',placeholder='Enter Email')
+            .form-group
+                label.col-md-2 Full Name
+                .col-md-10
+                    input.form-control(type='text',name='fname',placeholder='Enter Full name')
+            .form-group
+                label.col-md-2 Birth date
+                .col-md-10
+                    input.form-control(type='date',name='dob',placeholder='Enter Date of Birth dd/mm/yyyy')
+            br
+            .col-md-2
+            input.btn.btn-primary(type='submit',name='register',value='Register')
