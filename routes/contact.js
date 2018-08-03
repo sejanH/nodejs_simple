@@ -17,7 +17,7 @@ router.post('/send',function(req,res,next){
 	});
 	var mailOptions = {
 		from: req.body.name+' <johndoe@outlook.com>',
-		to: 'sejan840@gmail.com',
+		to: 'RECEIPIENT_EMAIL_HERE',
 		subject: 'Contact Form',
 		text: 'You have a new mail.. Name: '+req.body.name+' Email: '+req.body.email+' Message: '+req.body.message,
 		html: '<p>You got a new contact message</p> Name: '+req.body.name+'<br/>Email: '+req.body.email+'<br/>Message: '+req.body.message
